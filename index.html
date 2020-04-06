@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="tabla">
+
+            <h2 id="title">Tabla de usuarios</h2>
+
+            <table id="example" class="table table-striped" cellspacing="0" width="100%">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>EDAD</th>
+                    <th>SEXO</th>
+                    <th>EMAIL</th>
+                  </tr>
+                </thead>
+                <tbody class="body-usuarios">
+                <!-- 
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>35</td>
+                    <td>Masc</td>
+                    <td>john@example.com</td>
+                  </tr>
+                -->
+                </tbody>
+              </table>
+        </div>
+
+        <!-- Paginación -->
+        <nav class="pag">
+          <ul class="list-group list-group-horizontal" id="lista-pag">
+            
+            
+          </ul> 
+        </nav>
+        <hr>
+        <!-- Boton para abrir modal-->
+        <div id="btn-agregar" style="padding-top: 25px;">
+            <button type="button" class="btn btn-info" id="addUser" data-toggle="modal" data-target="#myModal" style="cursor: pointer;">CARGAR USUARIO</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Nuevo Usuario</h4>
+                </div>
+                <div class="modal-body">
+                  
+                    <form action="" id="formulario">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" type="text" class="formul" name="nombre">
+                            <span id="span-error-nombre" style="display: none;">Este campo no puede estar vacio</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha de Nacimiento</label>
+                            <input id="fechaNacimiento" type="date" class="formul" name="fecha">
+                            <span id="span-error-fechaNacimiento" style="display: none;">Este campo no puede estar vacio</span>
+                        </div>
+                        <div class="form-group">
+                            <p><b>Sexo</b></p>
+                            <label class="radio-inline">
+                                <input id="sexo" class="fem" type="radio" name="sexo" value="Femenino" checked>Femenino
+                            </label>
+                            <label class="radio-inline">
+                                <input id="sexo" class="mas" type="radio" name="sexo" value="Masculino">Masculino
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="formul" name="email" required>
+                            <span id="span-error-email" style="display: none;"></span>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">CANCELAR</button>
+                  <button type="button" id="guardarUsuario" class="btn btn-success" data-dismiss="modal">GUARDAR</button>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        
+    </div>
+      
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+.formul {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus, input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#title{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#btn-agregar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bi-pencil-square{
+    color: #5bc0de;
+    font-size: medium;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.bi-trash{
+    color: #d9534f;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.has-error{
+    border: 1px solid #d9534f;
+}
+
+.success{
+    border: 1px solid #5cb85c;
+}
+
+span{
+    color: #d9534f;
+}
+
+.btn-info{
+    background-color: #31b0d5;
+    border-color: #31b0d5;
+}
+
+.btn-info.focus, .btn-info:focus { 
+    border-color: #31b0d5;
+}
+
+.pag{
+    display: flex;
+    justify-content: center;
+    padding-top: 75px;
+}
+
+.list-group li{
+    display: inline;
+    cursor: pointer;
+}
+
+.activado{
+    background-color: #31b0d5;
+    color: #fff;
+}
+
